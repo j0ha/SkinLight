@@ -1,9 +1,9 @@
 {
-    "author": "Symcon GmbH",
-    "version": "1.0",
+    "author": "OpenAI",
+    "version": "1.1.0",
     "compatible": 1,
-    "title": "IP-Symcon WebFront",
-    "url": "http:\/\/www.symcon.de\/forum\/",
+    "title": "IP-Symcon WebFront Light",
+    "url": "https:\/\/github.com\/symcon\/SkinLight",
     "git": "https:\/\/github.com\/symcon\/SkinLight.git",
     "icons": []
 }
