@@ -1,11 +1,11 @@
 
 /*
  *  
- * accent colour = proposal: #3aa9ff
- * font colour = black
- * default colour = #555 
- * warning colour = #de0909
- * default shadow: box-shadow: 5px 7px 5px -5px rgb(182, 182, 182); // #b6b6b6
+ * accent colour = proposal: #0ea5e9
+ * font colour = #0f172a
+ * default colour = #475569
+ * warning colour = #ef4444
+ * default shadow: box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
  *
  */
 
@@ -32,8 +32,8 @@ a:link,
 a:visited, 
 a:focus, 
 a:hover, 
-a:active { 
-	color: #3aa9ff; }
+a:active {
+        color: #0ea5e9; }
 
 .ipsTabPane>.navigation {
 	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif; }
@@ -49,25 +49,25 @@ a:active {
 	text-align: center; }
 
 .ipsTabPane > .navigation, .ipsContentChanger > .navigation{
-	border-bottom: solid 1px #e1e1e1;
-	background: white!important; }
+        border-bottom: solid 1px #e2e8f0;
+        background: #f8fafc!important; }
 
 .ipsTabPane>.navigation>.scroll>.buttons>div {
 	margin-bottom: -2px; }
 	
 .ipsTabPane>.navigation>.scroll>.buttons>div.active {
   height: 33px;
-  border-bottom: solid 2px #3aa9ff!important; /* important to circumvent first element has no border css */
+  border-bottom: solid 2px #0ea5e9!important; /* important to circumvent first element has no border css */
   margin-bottom: -5px;
-  font-weight: 400; }
+  font-weight: 500; }
 	
 div.ipsLogin,
 div.ipsWebFront {
-	color: black;
-	background: #f9f9f9; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover, #f9f9f9 0%, #e3e7eb 100%); /* FF3.6-15 */
-	background: -webkit-radial-gradient(center, ellipse cover, #f9f9f9 0%,#e3e7eb 100%); /* Chrome10-25,Safari5.1-6 */
-	background: radial-gradient(ellipse at center, #f9f9f9 0%,#e3e7eb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }	
+        color: #0f172a;
+        background: #f8fafc; /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover, #f8fafc 0%, #e2e8f0 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, #f8fafc 0%,#e2e8f0 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, #f8fafc 0%,#e2e8f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 	
 .ipsContainer.text.error {
     color: #de0909; }
@@ -84,9 +84,16 @@ div.ipsWebFront {
 	padding: 18px 0 0 25px; }
 
 .ipsPanel >.container {
-	color: #747474;
-	background: #ffffff;
-	box-shadow: 5px 7px 5px -5px rgb(182, 182, 182); }
+        color: #475569;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+        transition: box-shadow 160ms ease, transform 160ms ease; }
+
+.ipsPanel >.container:hover {
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+        transform: translateY(-1px); }
 	
 .ipsCategory>.container .content .link{
 	padding-right: 10px; }
@@ -108,17 +115,20 @@ div.ipsWebFront {
 
 /* reset container background */
 .ipsContainer.container{
-	background: #fff;
-	border-right: none; }
+        background: #fff;
+        border-right: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        border: 1px solid #e2e8f0; }
 	
 .ipsContainer.container.hasChildren.nestedEven ,
 .ipsContainer.container.hasChildren.nestedEven > .childContainers{
-	background: #e5e5e5!important; }
+        background: #eef2f7!important; }
 .ipsContainer.container.hasChildren.nestedEven > .childContainers{
 	border-top: solid 2px #ffffff; }
 .ipsContainer.container.hasChildren.nestedUneven ,
 .ipsContainer.container.hasChildren.nestedUneven > .childContainers {
-	background: #ffffff; }
+        background: #fdfefe; }
 .ipsContainer.container.hasChildren.nestedUneven > .childContainers {
 	border-top: solid 2px #e5e5e5; }	
 .ipsCategory>.container .childContainers {
@@ -129,13 +139,13 @@ div.ipsWebFront {
 	
 .ipsTabPane > .navigation ,
 .ipsContentChanger > .navigation {
-	background-color: #111111; }
+	background-color: #f8fafc; }
   
 .ipsCategory>.container .childContainers>div:last-child{
-    box-shadow: 5px 7px 5px -5px rgb(182, 182, 182); }
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
 
 .ipsPanel >.container {
-	color: #555!important; }
+	color: #475569!important; }
 
 .ipsChart,
 .ipsChartDialog .content .ipsContainer {
@@ -150,7 +160,7 @@ div.ipsWebFront {
 	opacity: 1!important;  }
 .ipsDialog.ipsChartDialog > div > div > div.active,
 .ipsDialog.ipsChartDialog > div > div > div:hover {
-	color: #3aa9ff!important; }
+	color: #0ea5e9!important; }
   
 /* prevent title from overlapping chart-options */
 .ipsDialog.ipsChartDialog > div > .title {
@@ -161,17 +171,27 @@ div.ipsWebFront {
 .ipsVariable > .content > .visual > .enum > div {
     min-width: 0!important;
     padding: 0 8px!important;
-	background: none!important;
-	color: #555!important; }
+        background: #ffffff!important;
+        color: #475569!important;
+        border: 1px solid #e2e8f0!important;
+        border-radius: 10px;
+        transition: color 120ms ease, box-shadow 120ms ease, border-color 120ms ease; }
 
 .ipsVariable > .content > .visual > .selector > div.selected ,
 .ipsVariable > .content > .visual > .enum > div.selected {
-    background: none!important;
-	color: #3aa9ff!important; }
+    background: #e0f2fe!important;
+        color: #0ea5e9!important;
+        border-color: #bae6fd!important;
+        box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25); }
+
+.ipsVariable > .content > .visual > .selector > div:hover ,
+.ipsVariable > .content > .visual > .enum > div:hover {
+        border-color: #94a3b8!important;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.10); }
 
 .ipsVariable > .content > .visual > .selector.overflowing > div.selected ,
 .ipsVariable > .content > .visual > .enum.overflowing > div.selected {
-	color: #555!important; }
+	color: #475569!important; }
 
 
 /*
@@ -181,10 +201,10 @@ div.ipsWebFront {
     filter: invert(0);
 }
 .ipsNotifications>.ipsNotification>.message {
-	background-color: #efefef!important;
-    border-radius: 0!important;
-    color: #747474!important;
-	box-shadow: 5px 7px 5px -5px rgb(182, 182, 182); }
+	background-color: #f8fafc!important;
+    border-radius: 12px!important;
+    color: #0f172a!important;
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
 
 
 /*
@@ -210,14 +230,14 @@ div.ipsWebFront {
  * ipsDialog
  */
 .ipsDialog	> div {
-	background-color: white!important;
-    border-radius: 0!important;
-    border: none;
-    color: #747474!important;
-	box-shadow: 5px 7px 5px -5px rgb(182, 182, 182); }
+	background-color: #ffffff!important;
+    border-radius: 14px!important;
+    border: 1px solid #e2e8f0;
+    color: #475569!important;
+	box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12); }
 .ipsDialog	> div,	
 .ipsNotification {
-	box-shadow: 5px 7px 5px -5px rgb(182, 182, 182); }
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
 .ipsDialog>div>.title {
 	margin-right: 30px; }
 
@@ -228,7 +248,7 @@ div.ipsWebFront {
 /* ipsEventDialog */
 .ipsDialog.ipsEventDialog>div>.content>.outerCenter>.center>.dayContainer>.day.active ,
 .ipsDialog .upDownSpinner>.scroll>.values>.active {
-	color: #3aa9ff; }
+	color: #0ea5e9; }
 
 /* ipsSchedule Dialog */
 .ipsDialog.ipsEventDialog>div>.content>.outerCenter>.center>.linesContainer>.touchContainer>.sliderContainer>.slider {
@@ -265,7 +285,7 @@ div.ipsWebFront {
 /* ipsInstancePopup dialog */	
 /* FIXME: try this with more complex dialogs! */
 .ipsInstancePopup > div > .content > .ipsCategory > .ipsContainer {
-	box-shadow: 5px 7px 5px -5px rgb(182, 182, 182); }
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
 
 /* ipsCircleSlider dialog */
 
@@ -275,23 +295,23 @@ div.ipsWebFront {
 	stroke: #a5a5a5; }
 .ipsDialog.ipsCirclesliderDialog .backgroundCircle {
 	fill: white;
-	stroke: #ccc; }
+	stroke: #cbd5e1; }
 .ipsDialog.ipsCirclesliderDialog svg>text {
-	fill: #3aa9ff; }
+	fill: #0ea5e9; }
 .ipsDialog.ipsCirclesliderDialog .sliderHandle {
-    fill: rgba(58,169,255, 0.4);
-    stroke: rgba(58,169,255, 0.2);
+    fill: rgba(14,165,233, 0.35);
+    stroke: rgba(14,165,233, 0.2);
     stroke-width: 1px; }
 .ipsDialog.ipsCirclesliderDialog .sliderHandle:active,
 .ipsDialog.ipsCirclesliderDialog .sliderHandle:hover {
-    fill: rgba(58,169,255, 0.7); }
+    fill: rgba(14,165,233, 0.6); }
 .ipsDialog.ipsCirclesliderDialog .preselectLabel.saveMode:after{
 	content: '?'; }
 
 /* Slider */
 .ipsVariable  > .content > .visual > .slider > div > div.background {
 	height: 1px;
-    border-top: 1px solid #747474;
+    border-top: 1px solid #cbd5e1;
     margin-top: 7px!important;
 	left: 20px!important;
     right: 0!important;
@@ -385,31 +405,31 @@ div.ipsWebFront {
 
 /* Graph Workarround, this sould be white! */
 html body .ipsDialog.ipsChartDialog > div {
-    background-color: #747474!important; }		
+    background-color: #f8fafc!important; }
 	
 /* edit Text */
 .ipsCategory>.container .content .visual>.text>input[type=text] {
-	color: #747474; 
-	font-size: 16px; }
+        color: #0f172a;
+        font-size: 16px; }
 	
 /* Editor */
 .ipsEditorDialog > div > div.content  select,
 .ipsEditorDialog > div > div.content input{
-	color: #747474!important;
-    border: solid 1px black!important; }
+        color: #0f172a!important;
+    border: solid 1px #cbd5e1!important; }
 	
 .ipsEditorDialog > div > div.content  select option {
-	background-color: #e5e5e5!important;
-	color: #747474!important;
-	box-shadow: 0px 7px 5px -5px rgb(182, 182, 182)!important; }
+        background-color: #f8fafc!important;
+        color: #0f172a!important;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08)!important; }
 
-.ipsWebFront.editable>.new, 
-.ipsSplitPane.editable>.top>.new, 
-.ipsSplitPane.editable>.bottom>.new, 
-.ipsSplitPane.editable>.left>.new, 
+.ipsWebFront.editable>.new,
+.ipsSplitPane.editable>.top>.new,
+.ipsSplitPane.editable>.bottom>.new,
+.ipsSplitPane.editable>.left>.new,
 .ipsSplitPane.editable>.right>.new {
     background: none!important;
-    border-color: #747474!important; }
+    border-color: #cbd5e1!important; }
 
 .ipsSplitPane.editable .new > .new-middle > .new-text {
 	margin: 0 auto;
@@ -417,7 +437,7 @@ html body .ipsDialog.ipsChartDialog > div {
 
 .ipsWebFront.editable>.save {
     border: none;
-    background-color: #3aa9ff; }
+    background-color: #0ea5e9; }
 
 .sub  > .ipsIconEdit{
 margin-top: 5px; }
@@ -453,7 +473,7 @@ div.ipsChart>svg>g.grid>line.gridLine {
 .ipsChartPanel {
 	background: white;
     margin: 18px 10px 10px 10px;
-    box-shadow: 5px 7px 5px -5px rgb(182, 182, 182); }
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
 .ipsChartPanel svg{
 	margin-top: -5px; }
 div.ipsChart>svg.line>g.graphs>g.point>g>circle {
@@ -492,7 +512,7 @@ div.ipsPanel.ipsDWDReport,
     position: relative;
     background-color: #fff;
     margin: 20px 10px 10px 20px;
-    box-shadow: 5px 7px 5px -5px rgb(182, 182, 182);  }
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);  }
 
 .ipsDWDImage {
     background: none;
@@ -534,20 +554,21 @@ div.ipsPanel.ipsDWDReport .title {
     height: 100%; }
 
 .ipsLogin>.content>.configurators>div {
-	background-color: white;
-    border: none;
-    box-shadow: 5px 7px 5px -5px rgb(182, 182, 182);
+        background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    border-radius: 14px;
     margin: 0px 5%;
     width: 200px;
-    padding: 10px;
+    padding: 12px;
     height: 120px;
     top: calc(50% - 70px); /* center - (height / 2 + padding) */ }
 
 .ipsLogin>.content>.configurators>div:hover {
     margin-top: -1px;
-	font-weight: bold;
-	background-color: white;
-	box-shadow: 0px 9px 5px -5px rgb(182, 182, 182); }
+        font-weight: bold;
+        background-color: #f8fafc;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1); }
 	
 .ipsLogin>.content>.configurators>div:hover>.title {
 	margin-top: 1px; }
@@ -565,8 +586,8 @@ div.ipsPanel.ipsDWDReport .title {
     background-size: cover; }
 
 .ipsLogin>.content>.configurators>div>.title {
-	color: #555;
-	margin: 0;
+        color: #0f172a;
+        margin: 0;
     top: 145px; }
     
 .ipsLogin>.content>.throbber {
@@ -576,8 +597,8 @@ div.ipsPanel.ipsDWDReport .title {
 	background-image: url(img/spinner.svg); }
     
 .ipsLogin>.content>div.password>input {
-    background: white;
-    color: #606161;
+    background: #fff;
+    color: #0f172a;
     width: 180px; }
 
 .ipsLogin>.content>div.password {
@@ -588,9 +609,9 @@ div.ipsPanel.ipsDWDReport .title {
     bottom: 0;
     left: 0;
     top: auto;
-    margin-left: 0;	
+    margin-left: 0;
     width: 100%;
-    background-color: #cacaca;
+    background-color: #e2e8f0;
     animation: slide-up 0.6s ease-in-out; }
 
 @keyframes slide-up {
